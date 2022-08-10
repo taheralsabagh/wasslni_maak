@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\VehiclesController;
+use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 ############################ Auth Apis ########################
 Route::get('/omran', [AuthController::class, 'omran'])->name('omran');
+Route::get('/addRole', [Role::class, 'add']);
 Route::get('/index', [AuthController::class, 'index'])->name('index');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/get_all_data', [VehiclesController::class, 'getAllData']);
