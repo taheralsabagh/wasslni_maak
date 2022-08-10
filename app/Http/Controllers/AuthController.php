@@ -21,25 +21,38 @@ class AuthController extends Controller
     }
     public function register(Request $request)
     {
-        $validatedData = $request->validate([
-            'username' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
-            'whatsapp_number' => 'required|string',
-            'sms_number' => 'required|string',
-        ]);
+        // $validatedData = $request->validate([
+        //     'username' => 'required|string|max:255',
+        //     'email' => 'required|string|email|max:255|unique:users',
+        //     'password' => 'required|string|min:8',
+        //     'whatsapp_number' => 'required|string',
+        //     'sms_number' => 'required|string',
+        // ]);
 
         $user = User::create([
-            'username' => $validatedData['username'],
-            'email' => $validatedData['email'],
-            'password' => Hash::make($validatedData['password']),
+            'name' => 'Taher',
+            'username' => 'taher',
+            'email' => 'wasslnimaak@gmail.com',
+            'password' => Hash::make('12345678'),
             'role_id' => 1,
-            'whatsapp_number' => $validatedData['whatsapp_number'],
-            'sms_number' => $validatedData['sms_number'],
-            'whatsapp_message' => $request['whatsapp_message'],
-            'sms_message' => $request['sms_message'],
-            'instructions' => $request['instructions'],
+            'whatsapp_number' => '+963947462296',
+            'sms_number' => '+963947462296',
+            'whatsapp_message' => '+963947462296',
+            'sms_message' => '+963947462296',
+            'instructions' => 'instructions',
         ]);
+        // $user = User::create([
+        //     'name' => 'Taher',
+        //     'username' => $validatedData['username'],
+        //     'email' => $validatedData['email'],
+        //     'password' => Hash::make($validatedData['password']),
+        //     'role_id' => 1,
+        //     'whatsapp_number' => $validatedData['whatsapp_number'],
+        //     'sms_number' => $validatedData['sms_number'],
+        //     'whatsapp_message' => $request['whatsapp_message'],
+        //     'sms_message' => $request['sms_message'],
+        //     'instructions' => $request['instructions'],
+        // ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
