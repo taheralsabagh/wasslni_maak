@@ -34,7 +34,7 @@ class AuthController extends Controller
             'username' => 'taher',
             'email' => 'wasslnimaak@gmail.com',
             'password' => Hash::make('12345678'),
-            'role_id' => 1,
+            'is_admin' => 1,
             'whatsapp_number' => '+963947462296',
             'sms_number' => '+963947462296',
             'whatsapp_message' => '+963947462296',

@@ -24,7 +24,7 @@ class User extends Authenticatable
         'password',
         'remember_token',
         'map_token',
-        'role_id',
+        'is_admin',
         'whatsapp_number',
         'sms_number',
         'whatsapp_message',
