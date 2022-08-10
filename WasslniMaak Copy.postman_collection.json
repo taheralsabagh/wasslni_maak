@@ -1,0 +1,1124 @@
+{
+	"info": {
+		"_postman_id": "4f36791b-5846-49de-8501-05d107b5fc01",
+		"name": "WasslniMaak Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18450014"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Taher",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Taher",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/login",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "20|4qtsGCAnes1DEt9YyPsNTtqPPE3C4p0lTGve2QxN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/logout",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get User Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/me",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "get all vehicles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/view_all_vehicles",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"view_all_vehicles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "vehicle",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_address}}api/vehicle",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"vehicle"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"taxi\",\n        \"min_price\": 2000,\n        \"kilometer_price\": 800,\n        \"max_passengers\": 6,\n        \"image\": \"url\"\n    },\n    {\n        \"name\": \"bus\",\n        \"min_price\": 2500,\n        \"kilometer_price\": 1000,\n        \"max_passengers\": 12,\n        \"image\": \"url\"\n    }\n]"
+						},
+						{
+							"name": "get all vehicles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "wasslnimaak.000webhostapp.com/api/view_all_vehicles",
+									"host": [
+										"wasslnimaak",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"view_all_vehicles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 15:49:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "260"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "awex"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ed2fb32bff3806a2407637da17d9f655"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"stauts\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"car\",\n            \"image\": \"1657497690.png\",\n            \"max_passengers\": 4,\n            \"min_price\": 3000,\n            \"kilometer_price\": 1600\n        },\n        {\n            \"id\": 2,\n            \"name\": \"van\",\n            \"image\": \"1657586092.png\",\n            \"max_passengers\": 6,\n            \"min_price\": 5000,\n            \"kilometer_price\": 3200\n        }\n    ],\n    \"message\": \"The Vehicles\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/delete_vehicle/{vehicle_id}",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delete_vehicle",
+								"{vehicle_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "taxe3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/edit_vehicle/5",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"edit_vehicle",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit vehicle",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"taxi\",\n    \"min_price\": 2000,\n    \"kilometer_price\": 800,\n    \"max_passengers\": 6,\n    \"image\": \"url\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_address}}api/vehicle/1",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"vehicle",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "edit vehicle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "taxe3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "wasslnimaak.000webhostapp.com/api/edit_vehicle/5",
+									"host": [
+										"wasslnimaak",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"edit_vehicle",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 16:54:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "awex"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "42af6ff2e4f7261c1b60489769c98102"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"taxe3\",\n        \"image\": \"1658594970.png\",\n        \"max_passengers\": 150,\n        \"min_price\": 150,\n        \"kilometer_price\": 150\n    },\n    \"message\": \"Vehicle information has been updated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "add vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "taxi2",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/LENOVO/Downloads/order.png"
+								},
+								{
+									"key": "max_passengers",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "min_price",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "kilometer_price",
+									"value": "150",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/add_vehicle",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"add_vehicle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{server_address}}api/vehicle",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"vehicle"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"name\": \"taxi\",\n    \"min_price\": 2000,\n    \"kilometer_price\": 800,\n    \"max_passengers\": 6,\n    \"image\": \"url\"\n}"
+						},
+						{
+							"name": "add vehicle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "taxi2",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/Downloads/order.png"
+										},
+										{
+											"key": "max_passengers",
+											"value": "150",
+											"type": "text"
+										},
+										{
+											"key": "min_price",
+											"value": "150",
+											"type": "text"
+										},
+										{
+											"key": "kilometer_price",
+											"value": "150",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "wasslnimaak.000webhostapp.com/api/add_vehicle",
+									"host": [
+										"wasslnimaak",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"add_vehicle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 16:49:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "174"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "awex"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "2de262cb2a043e2966cf81789b4a9b1f"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"name\": \"taxi2\",\n        \"image\": \"1658594970.png\",\n        \"max_passengers\": \"150\",\n        \"min_price\": \"150\",\n        \"kilometer_price\": \"150\",\n        \"id\": 5\n    },\n    \"message\": \"Vehicle added successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Instruction",
+			"item": [
+				{
+					"name": "User Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/me",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get instructions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_address}}api/instrucrion/all",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"instrucrion",
+										"all"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n    \"you should order the vehicle before 20 min at least\",\n    \"feel free to contact via sms when whatsapp takes too long to respond\"\n]"
+						},
+						{
+							"name": "get instructions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "wasslnimaak.000webhostapp.com/api/me",
+									"host": [
+										"wasslnimaak",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 17:17:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "239"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "awex"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ec1dbf9d7495962b7fa0136982d7823d"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"username\": \"Taher\",\n    \"email\": \"Taher@gmail.com\",\n    \"role_id\": 1,\n    \"whatsapp_number\": \"+963947462296\",\n    \"sms_number\": \"+963947462296\",\n    \"whatsapp_message\": \"+963947462296\",\n    \"sms_message\": \"please send the order to +963947462296\",\n    \"instructions\": \"any\"\n}"
+						}
+					]
+				},
+				{
+					"name": "edit User Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "instructions",
+									"value": "instructions",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/edit_user_info",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"edit_user_info"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit instructions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "instructions",
+											"value": "instructions",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "wasslnimaak.000webhostapp.com/api/edit_user_info",
+									"host": [
+										"wasslnimaak",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"edit_user_info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 17:27:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "awex"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "bb50e3d9a180af9ccb042554a1cdac16"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"id\": 2,\n        \"username\": \"Taher\",\n        \"email\": \"Taher@gmail.com\",\n        \"role_id\": 1,\n        \"whatsapp_number\": \"+963947462296\",\n        \"sms_number\": \"+963947462296\",\n        \"whatsapp_message\": \"+963947462296\",\n        \"sms_message\": \"please send the order to +963947462296\",\n        \"instructions\": \"instructions\"\n    },\n    \"message\": \"User information has been updated\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "get contacts info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_address}}api/contact/all",
+							"host": [
+								"{{server_address}}api"
+							],
+							"path": [
+								"contact",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get contacts info",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_address}}api/contact/all",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"contact",
+										"all"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"whatsapp\",\n        \"value\": \"+96358690017\",\n        \"message\": \"please send me an order\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"sms\",\n        \"value\": \"+96358690017\",\n        \"message\": \"please send me an order\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "edit contact",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{server_address}}api/contact/1",
+							"host": [
+								"{{server_address}}api"
+							],
+							"path": [
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit contact",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"whatsapp\",\n    \"value\": \"+96358690017\",\n    \"message\": \"please send me an order\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_address}}api/contact/1",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"contact",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "no auth (user)",
+			"item": [
+				{
+					"name": "get all data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_address}}api/all",
+							"host": [
+								"{{server_address}}api"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "{{server_address}}api/get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_address}}api/data",
+									"host": [
+										"{{server_address}}api"
+									],
+									"path": [
+										"data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"vehicles\" : [\n        {\n            \"id\" : 1,\n            \"name\": \"taxi\",\n            \"min_price\": 2000,\n            \"kilometer_price\": 800,\n            \"max_passengers\": 6,\n            \"image\": \"url\"\n        },\n        {\n            \"id\" : 2,\n            \"name\": \"bus\",\n            \"min_price\": 2500,\n            \"kilometer_price\": 1000,\n            \"max_passengers\": 12,\n            \"image\": \"url\"\n        }\n    ],\n    \"contacts\" : [\n        {\n            \"id\" : 1,\n            \"name\": \"whatsapp\",\n            \"value\": \"+96358690017\",\n            \"message\":\"please send me an order\"\n        },\n        {\n            \"id\":2,\n            \"name\": \"sms\",\n            \"value\": \"+96358690017\",\n            \"message\":\"please send me an order\"\n        }\n    ],\n    \"instructions\": [\n        \"you should order the vehicle before 20 min at least\",\n        \"feel free to contact via sms when whatsapp takes too long to respond\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get mapbox token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "22|kqWHzXjo0fOxoUrIu780XaFVBOSHgz4Vd64zY6dG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "wasslnimaak.000webhostapp.com/api/get_mapbox_Token",
+							"host": [
+								"wasslnimaak",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"get_mapbox_Token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "{{server_address}}auth/users/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_address}}/api/mapbox/token",
+									"host": [
+										"{{server_address}}"
+									],
+									"path": [
+										"api",
+										"mapbox",
+										"token"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"access_token\" : \"pk.eyJ1IjoiZmFkaWZ1dGFpbmFoIiwiYSI6ImNsNXd2aDRoczBucWQzZGx0MmRuaHgyZjYifQ.KWBQnZ-39ikghxMXtlMGGg\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "server_address",
+			"value": "https://wasslnimaak.000webhostapp.com/"
+		}
+	]
+}

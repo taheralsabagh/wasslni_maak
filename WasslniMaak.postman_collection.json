@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "105746a1-9743-40f8-89e2-8839936172dc",
+		"name": "WasslniMaak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18450014"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|h9BnmKjocwdbOBWSdNGceRnPZOwPFv8HJzC7gU6u",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Taher",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Taher",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|ZKhjVg0l3bnTzAVhpqFtExQbCLtqdLgWH8IGp20k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"index"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "addVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|yYeCPkkDahSbuzU9DAE14J9aLysH5p0B1yfeWAcv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "bus",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/xampp/htdocs/ci_project/assets/images/shopping-cart.png"
+								},
+								{
+									"key": "max_passengers",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "min_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "kilometer_price",
+									"value": "1600",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/addVehicle",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"addVehicle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addVehicle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "bus",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/xampp/htdocs/ci_project/assets/images/shopping-cart.png"
+										},
+										{
+											"key": "max_passengers",
+											"value": "25",
+											"type": "text"
+										},
+										{
+											"key": "min_price",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "kilometer_price",
+											"value": "1600",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/addVehicle",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"addVehicle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 00:34:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 00:34:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    200,\n    [],\n    \"Vehicle added successfully\"\n]"
+						}
+					]
+				},
+				{
+					"name": "editVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "12|yYeCPkkDahSbuzU9DAE14J9aLysH5p0B1yfeWAcv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "van",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "max_passengers",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "min_price",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "kilometer_price",
+									"value": "3200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/editVehicle/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"editVehicle",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "editVehicle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "van",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "max_passengers",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "min_price",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "kilometer_price",
+											"value": "3200",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/editVehicle/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"editVehicle",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 01:14:16 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 01:14:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    200,\n    [],\n    \"Vehicle information has been updated\"\n]"
+						}
+					]
+				},
+				{
+					"name": "getVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|F9FPfIAPo0LgwUNxLaCGHAEBvaLopKjhyQpnnwfi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "idintity",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "name",
+									"type": "text"
+								},
+								{
+									"key": "idintity",
+									"value": "van",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getVehicle",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getVehicle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getVehicle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "id",
+											"type": "text"
+										},
+										{
+											"key": "idintity",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "name",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "idintity",
+											"value": "van",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getVehicle",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getVehicle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 01:30:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 01:30:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    200,\n    {\n        \"id\": 1,\n        \"name\": \"car\",\n        \"image\": \"1657497690.png\",\n        \"max_passengers\": 4,\n        \"min_price\": 3000,\n        \"kilometer_price\": 1600\n    },\n    \"\"\n]"
+						},
+						{
+							"name": "getVehicle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "idintity",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "name",
+											"type": "text"
+										},
+										{
+											"key": "idintity",
+											"value": "van",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getVehicle",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getVehicle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 01:31:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 01:31:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    200,\n    {\n        \"id\": 2,\n        \"name\": \"van\",\n        \"image\": \"1657586092.png\",\n        \"max_passengers\": 6,\n        \"min_price\": 5000,\n        \"kilometer_price\": 3200\n    },\n    \"\"\n]"
+						}
+					]
+				},
+				{
+					"name": "view All Vehicles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|ZKhjVg0l3bnTzAVhpqFtExQbCLtqdLgWH8IGp20k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/viewAllVehicles",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viewAllVehicles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "view All Vehicles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/viewAllVehicles",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"viewAllVehicles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Jul 2022 23:47:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Jul 2022 23:47:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    200,\n    [],\n    \"The Vehicles\"\n]"
+						},
+						{
+							"name": "view All Vehicles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/viewAllVehicles",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"viewAllVehicles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 00:35:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Jul 2022 00:35:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    200,\n    [\n        {\n            \"id\": 1,\n            \"name\": \"car\",\n            \"image\": \"1657497690.png\",\n            \"max_passengers\": 4,\n            \"min_price\": 3000,\n            \"kilometer_price\": 1600\n        },\n        {\n            \"id\": 2,\n            \"name\": \"bus\",\n            \"image\": \"1657586092.png\",\n            \"max_passengers\": 25,\n            \"min_price\": 3000,\n            \"kilometer_price\": 1600\n        }\n    ],\n    \"The Vehicles\"\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "editUserInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "16|nwKZRKH5w7tkbwjdxvIUDIXj3mtnOafn8Dy237NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "whatsapp_number",
+							"value": "+963947462296",
+							"type": "text"
+						},
+						{
+							"key": "sms_message",
+							"value": "please send the order to +963947462296",
+							"type": "text"
+						},
+						{
+							"key": "instructions",
+							"value": "any",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/editUserInfo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"editUserInfo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "editUserInfo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "whatsapp_number",
+									"value": "+963947462296",
+									"type": "text"
+								},
+								{
+									"key": "sms_message",
+									"value": "please send the order to +963947462296",
+									"type": "text"
+								},
+								{
+									"key": "instructions",
+									"value": "any",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/editUserInfo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"editUserInfo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Jul 2022 00:05:59 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Jul 2022 00:05:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [],\n    \"message\": \"User information has been updated\"\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+    "id" : 2,
+    "username" : "Taher",
+    "email" : "Taher@gmail.com",
+    "password" : "$2y$10$FughxNJFvNmvwSd9LSdJKeaLBZDoEUGuinUJGUx8028vp5ujpZ46O",
+    "remember_token" : "9bffcd80b926ea204a0b4814b076356006773f4f49ecc3632b83cc0c842ccfd9",
+    "map_token" : "any token",
+    "last_update_token" : 54665,
+    "role_id" : 1,
+    "whatsapp_number" : "+963999732427",
+    "sms_number" : "+963999732427",
+    "whatsapp_message" : "+963947462296",
+    "sms_message" : "please send the order to +963947462296",
+    "instructions" : "instructio"
+}
