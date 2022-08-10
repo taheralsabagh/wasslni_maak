@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::update('users', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('username')->unique();
@@ -38,9 +38,9 @@ return new class extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('users');
-        Schema::table('users', function(Blueprint $table){
-            $table->addColumn('string', 'username');
-        });
+        Schema::dropIfExists('users');
+        // Schema::table('users', function(Blueprint $table){
+        //     $table->addColumn('string', 'username');
+        // });
     }
 };
