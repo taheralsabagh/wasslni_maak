@@ -25,13 +25,20 @@ class AuthController extends Controller
             'username' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
+            'whatsapp_number' => 'required|string',
+            'sms_number' => 'required|string',
         ]);
 
         $user = User::create([
-            'name' => $validatedData['name'],
+            'username' => $validatedData['username'],
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password']),
-            // 'role_id' => 
+            'role_id' => 1,
+            'whatsapp_number' => $validatedData['whatsapp_number'],
+            'sms_number' => $validatedData['sms_number'],
+            'whatsapp_message' => $request['whatsapp_message'],
+            'sms_message' => $request['sms_message'],
+            'instructions' => $request['instructions'],
         ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
